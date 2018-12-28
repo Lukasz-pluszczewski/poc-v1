@@ -6,7 +6,7 @@ const HUMIDITY_CHECK_INTERVAL = 500;
 
 export default (io, verifier, sensor) => {
     io.on('connection', (client) => {
-        client.on('login', Auth(client, verifier));
+        client.on('login', Auth(client, verifier, sensor));
     });
 
     const t = new OnChange(TEMPERATURE_CHECK_INTERVAL, () => sensor.read().temperature);
