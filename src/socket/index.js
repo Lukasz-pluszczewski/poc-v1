@@ -19,7 +19,7 @@ export default (io, verifier, sensor) => {
         });
     });
     t.on('change', (value, oldValue) => {
-        io.to('users').emit('humidity:changed', {
+        io.to('users').emit('temperature:changed', {
             value,
             oldValue,
         });
