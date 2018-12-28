@@ -1,9 +1,7 @@
-# Czarny api boilerplate 2
+# Temperature and humidity raspberry server
 
 ### Environment variables
 - **PORT** (default: 8080)
-- **DB_NAME** (default: 'papu')
-- **DB_HOST** (default: 'localhost:27017')
 - **ADMIN_PASSWORD** - (*required*) password to access API
 
 ### Run development build
