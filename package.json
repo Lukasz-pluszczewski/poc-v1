@@ -1,23 +1,45 @@
 {
   "name": "poc-v1",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Lukasz-pluszczewski/poc-v1.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lukasz-pluszczewski/poc-v1/issues"
+  "main": "dist",
+  "scripts": {
+    "dev": "NODE_PATH=src ENV=development nodemon --exec babel-node -- src/index.js",
+    "build": "NODE_PATH=src babel src -s -d dist",
+    "start": "NODE_PATH=dist ENV=production node dist",
+    "prestart": "NODE_PATH=src npm run -s build",
+    "lint": "NODE_PATH=src eslint src || true",
+    "lint:fix": "NODE_PATH=src eslint src --fix"
   },
-  "homepage": "https://github.com/Lukasz-pluszczewski/poc-v1#readme",
+  "author": "Łukasz Pluszczewski",
+  "license": "MIT",
   "dependencies": {
-    "node-dht-sensor": "0.0.34",
-    "dht-sensor": "0.0.5"
+    "all-log": "1.1.0",
+    "body-parser": "1.18.3",
+    "cheerio": "1.0.0-rc.2",
+    "compression": "1.7.3",
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "express-fileupload": "1.0.0",
+    "lodash": "4.17.11",
+    "mongodb": "3.1.10",
+    "node-cmd": "3.0.0",
+    "superagent": "4.0.0",
+    "node-dht-sensor": "0.0.34"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.6",
+    "@babel/node": "7.0.0",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-decorators": "7.1.6",
+    "@babel/preset-env": "7.1.6",
+    "@babel/preset-stage-0": "7.0.0",
+    "eslint": "4.8.0",
+    "eslint-config-brainhub": "1.6.3",
+    "nodemon": "1.18.7"
   }
 }
