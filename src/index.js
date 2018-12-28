@@ -23,7 +23,7 @@ app.use(cors({
 const sensor = dhtService(4);
 
 app.use(checkPassword(config.password));
-app.use(bodyParser.json({ limit: config.bodyLimit }), api({ db, sensor }));
+app.use(bodyParser.json({ limit: config.bodyLimit }), api({ sensor }));
 
 // starting actual server
 app.server.listen(config.port);

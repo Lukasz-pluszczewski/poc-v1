@@ -1,6 +1,6 @@
 import { Router as router } from 'express';
 
-export default ({ db, sensor }) => {
+export default ({ sensor }) => {
   const api = router();
 
   api.get('/health', (req, res) => {
