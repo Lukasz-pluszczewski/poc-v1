@@ -27,8 +27,9 @@
     "lodash": "4.17.11",
     "mongodb": "3.1.10",
     "node-cmd": "3.0.0",
-    "superagent": "4.0.0",
-    "node-dht-sensor": "0.0.34"
+    "node-dht-sensor": "0.0.34",
+    "socket.io": "2.2.0",
+    "superagent": "4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "7.1.5",
